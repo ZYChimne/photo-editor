@@ -125,7 +125,7 @@ export default function LUTProcessor() {
           accept="image/*"
           onChange={(e) =>
             handleFile(
-              e.target.files?.[0],
+              (e.target as any).files?.[0],
               processImage,
               "Failed to load image"
             )
@@ -137,7 +137,7 @@ export default function LUTProcessor() {
           accept=".cube"
           onChange={(e) =>
             handleFile(
-              e.target.files?.[0],
+              (e.target as any).files?.[0],
               processLUT,
               "Invalid LUT file format"
             )
